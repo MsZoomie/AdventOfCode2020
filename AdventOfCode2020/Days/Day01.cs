@@ -5,12 +5,15 @@ using System.Text;
 
 namespace AdventOfCode2020.Days
 {
-	class Day01 : IDay
+	class Day01 : DayBase
 	{
-		static string inputPath = "C:\\C\\Repos\\AdventOfCode2020\\AdventOfCode2020\\AdventOfCode2020\\Inputs\\Input01.txt";
-		public string SolvePart1()
+		public Day01(string inputFile) : base(inputFile) {}
+
+		public override string InputPath { get; set; }
+		
+		public override string SolvePart1()
 		{
-			var input = File.ReadAllLines(inputPath);
+			var input = File.ReadAllLines(InputPath);
 			foreach (var first in input)
 			{
 				int a = int.Parse(first);
@@ -31,9 +34,9 @@ namespace AdventOfCode2020.Days
 			return "Couldn't find answer";
 		}
 
-		public string SolvePart2()
+		public override string SolvePart2()
 		{
-			var input = File.ReadAllLines(inputPath);
+			var input = File.ReadAllLines(InputPath);
 			foreach (var first in input)
 			{
 				int a = int.Parse(first);
