@@ -8,7 +8,7 @@ namespace AdventOfCode2020
 		{
 			Console.WriteLine("Advent of Code 2020");
 
-			var day = new Days.Day01("Input01");
+			var day = new Days.Day03("Input03");
 			Console.WriteLine("Part 1:\n" + day.SolvePart1());
 
 			Console.WriteLine("Part 2:\n" + day.SolvePart2());
